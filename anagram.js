@@ -1,4 +1,18 @@
-//check if one string is an anagram of another string
+// ANAGRAM CHALLENGE
+// 1. Check if one string is an anagram of another string.
+// 2. A string, in this instance can consist of letters and numbers.
+// 3. You should ignore white space and any none alphanumeric characters when comparing strings.
+
+
+//Boilerplate
+/*
+const anagram = (str1, str2) => {
+
+
+    return str1 === str2; // check if the two string match each other
+}
+*/
+
 
 const anagram = (str1, str2) => {
     nstr1 = str1.replace(/[^\w\s]|_/g, "") // remove none alphanumeric characters
