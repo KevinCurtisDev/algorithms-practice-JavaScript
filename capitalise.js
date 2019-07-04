@@ -12,6 +12,10 @@ const capitalise = str => {
 }
 */
 
+//My solution
+//I used map to create a new array returning a capitalised first letter of 
+//each word concatinated to each sliced word with the first letter removed.
+
 const capitalise = str => {
     strArray = str.split(" "); //split the string into an array
     let newStr = strArray.map(word => {

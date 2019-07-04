@@ -13,23 +13,17 @@ const anagram = (str1, str2) => {
 }
 */
 
-
-const anagram = (str1, str2) => {
-    nstr1 = str1.replace(/[^\w\s]|_/g, "") // remove none alphanumeric characters
+const mutateString = s => {
+    return s.replace(/[^\w\s]|_/g, "") // remove none alphanumeric characters
         .replace(/\s+/g, "") // remove spaces
         .toLowerCase() // lowercase the string
         .split('') // split into an array
         .sort() // sort the array
         .join(); // join back into a string
+}
 
-    nstr2 = str2.replace(/[^\w\s]|_/g, "")
-        .replace(/\s+/g, "")
-        .toLowerCase()
-        .split('')
-        .sort()
-        .join();
-    
-    return nstr1 === nstr2; // check if the two string match each other
+const anagram = (str1, str2) => {
+    return mutateString(str1) === mutateString(str2); // check if the two string match each other
 }
 
 //tests
